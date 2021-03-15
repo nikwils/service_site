@@ -1,3 +1,5 @@
+'use strict';
+
 const changePhotoTeam = () => {
 
     const command = document.querySelector('#command');

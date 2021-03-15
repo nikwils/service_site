@@ -1,12 +1,17 @@
+'use strict';
+
 const togglePopup = () => {
     const popup = document.querySelector('.popup'),
         popupBtn = document.querySelectorAll('.popup-btn'),
-        popupContent = document.querySelector('.popup-content');
+        popupContent = document.querySelector('.popup-content'),
+        menu = document.querySelector('menu');
 
     let count = 0,
         appearanceInterval;
 
     function appearanceAnimate(){
+
+        menu.classList.remove('active-menu');
 
         appearanceInterval = requestAnimationFrame(appearanceAnimate);
         count += 1;
@@ -23,16 +28,18 @@ const togglePopup = () => {
             cancelAnimationFrame(appearanceInterval);
         }
         
+        
     };
     
     popupBtn.forEach((el)=>{el.addEventListener('click', function(){
-            appearanceAnimate();
+        count = 0;
+        appearanceAnimate();
         });
     });
 
     popup.addEventListener('click', (event)=>{
         let target = event.target;
-
+        
         if(target.classList.contains('popup-close')){
             count = 0;
             popup.style.display = 'none';
@@ -44,7 +51,7 @@ const togglePopup = () => {
                 popup.style.display = 'none';
             }
         }
+        
     });
 };
-
 export default togglePopup;

@@ -1,3 +1,5 @@
+'use strict';
+
 const tabs = () => {
     const tabHeader = document.querySelector('.service-header'),
         tab = tabHeader.querySelectorAll('.service-header-tab'),
@@ -18,9 +20,7 @@ const tabs = () => {
         tabHeader.addEventListener('click', (el) => {
             let target = event.target;
 
-                console.log(target);
                 target = target.closest('.service-header-tab');
-                console.log(target);
 
                 if(target) {
                     
@@ -34,7 +34,7 @@ const tabs = () => {
                 
             
 
-        });
+        })
 
 };
 

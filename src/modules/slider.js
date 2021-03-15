@@ -1,3 +1,5 @@
+'use strict';
+
 const slider = () => {
     const slides = document.querySelectorAll('.portfolio-item'),
         slider = document.querySelector('.portfolio-content');
