@@ -14,6 +14,10 @@ const dataValidation = () => {
             formBtns.forEach((el) => {
                 el.disabled = true;
             })
+        } else if(target.value.length) {
+            formBtns.forEach((el) => {
+                el.disabled = false;
+            })
         } else {
             formBtns.forEach((el) => {
                 el.disabled = false;

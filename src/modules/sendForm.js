@@ -43,12 +43,12 @@ const sendForm = (elID) => {
                     statusMessage.style.cssText = 'color: white;';
                     setTimeout(() => {
                         popup.style.display = 'none';
-                    },8000)
+                    },6000)
                 } 
                 
                 setTimeout(()=> {
                     statusMessage.hidden = true;
-                }, 5000);
+                }, 4000);
                 
             })
             .catch(error => {
